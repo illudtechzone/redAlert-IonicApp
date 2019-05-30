@@ -1,0 +1,7 @@
+{
+  "name": "redAlert",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}

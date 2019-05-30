@@ -1,0 +1,20 @@
+<app-navbar></app-navbar>
+<ion-content>
+  <ion-card class="welcome-card">
+    <ion-img src="/assets/img/bg-banner.jpg"></ion-img>
+    <ion-card-header>
+      <ion-card-title>RedAlert</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <p>Your Social Emergency Handler</p>
+    </ion-card-content>
+  </ion-card>
+  <h1 text-center>Broadcast Your Emergency</h1>
+  <ion-row justify-content-center>
+    <ion-buttons>
+      <ion-button fill="solid" color="danger" shape="round" (click)="openModal('Red')"  class="alert-button">RED</ion-button>
+      <ion-button fill="solid" color="warning" shape="round" (click)="openModal('Orange')"  class="alert-button">ORANGE</ion-button>
+      <ion-button fill="solid" color="success" shape="round" class="alert-button">GREEN</ion-button>
+    </ion-buttons>
+  </ion-row>
+</ion-content>

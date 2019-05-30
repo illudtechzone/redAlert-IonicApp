@@ -1,0 +1,18 @@
+<ion-header>
+  <ion-toolbar color="dark">
+    <ion-buttons slot="end">
+      <ion-chip (click)="presentPopover($event)" color="light">
+        <ion-avatar>
+          <img src="https://gravatar.com/avatar/dba6bae8c566f9d4041fb9cd9ada7741?d=identicon&f=y">
+        </ion-avatar>
+        <ion-label color="light" *ngIf="!isIOS" >{{ profileName }}</ion-label>
+      </ion-chip>
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>
+      <a [routerLink]="['/home']">
+        RedAlert
+      </a>
+    </ion-title>
+  </ion-toolbar>
+</ion-header>

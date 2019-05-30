@@ -1,0 +1,33 @@
+<ion-header>
+  <ion-toolbar color="dark">
+    <ion-title>RedAlert</ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="login()"  fill="solid" color="danger">
+        Login
+      </ion-button>
+      <ion-button fill="solid" color="danger" (click)="login()">
+        Sign Up
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card class="welcome-card">
+    <ion-img src="/assets/img/bg-banner.jpg"></ion-img>
+    <ion-card-header>
+      <ion-card-title>RedAlert</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-row>
+        <ion-col size="6">
+          <p>Your Social Emergency Handler</p>
+          <p>Please login by clicking the login button</p>
+        </ion-col>
+        <ion-col size="6" class="ion-text-end">
+          <ion-button (click)="login()"  fill="solid" color="danger">Login</ion-button>
+        </ion-col>
+      </ion-row>
+    </ion-card-content>
+  </ion-card>
+</ion-content>
