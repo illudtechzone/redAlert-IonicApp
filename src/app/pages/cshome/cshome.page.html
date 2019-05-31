@@ -1,0 +1,40 @@
+<app-navbar></app-navbar>
+
+<ion-content padding>
+
+  <ion-slides [options]="slideConfig" *ngFor="let number of numbers">
+    <ion-slide *ngFor="let number of numbers">
+    
+      <ion-card>
+        <ion-grid>
+          <ion-card-header>
+            <ion-text >manu</ion-text>
+             </ion-card-header>
+          <ion-row>
+            a man try to rob in the road near school,
+            a man try to rob in the road near school
+            a man try to rob in the road near school
+          </ion-row>
+            <ion-row>
+            <ion-col>
+                <ion-button  expand="block">
+                    <ion-icon name="thumbs-up"></ion-icon>
+                  </ion-button>
+                  </ion-col>
+                  <ion-col>
+                  <ion-button   expand="block">
+                      <ion-icon name="thumbs-down"></ion-icon>
+                  </ion-button>
+             </ion-col>
+             </ion-row>
+             </ion-grid>
+        </ion-card>   
+        </ion-slide>
+      </ion-slides>
+      <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+          <ion-fab-button (click)="presentModal()">
+            <ion-icon name="add"></ion-icon>
+          </ion-fab-button>
+        </ion-fab>
+      
+</ion-content>

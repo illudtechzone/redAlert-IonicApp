@@ -40,6 +40,18 @@ export class AppComponent {
       icon: 'people'
     },
   ];
+  public appCSPages = [
+    {
+      title: 'Home',
+      url: '/cshome',
+      icon: 'home'
+    },
+    {
+      title: 'Friends',
+      url: '/csfriends',
+      icon: 'people'
+    },
+  ];
 
   constructor(
     private platform: Platform,

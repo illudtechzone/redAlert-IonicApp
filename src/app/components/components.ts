@@ -6,6 +6,7 @@ import { AgmCoreModule } from '@agm/core';
 
 import { IonicModule } from '@ionic/angular';
 import { UserOptionsPopoverComponent } from './user-options-popover/user-options-popover.component';
+import { CreateComplaintComponent } from './create-complaint/create-complaint.component';
 
 
 @NgModule({
@@ -19,11 +20,13 @@ import { UserOptionsPopoverComponent } from './user-options-popover/user-options
   ],
   declarations: [
     PostAlertModalComponent,
-    UserOptionsPopoverComponent
+    UserOptionsPopoverComponent,
+    CreateComplaintComponent
   ],
   exports: [
     PostAlertModalComponent,
-    UserOptionsPopoverComponent
+    UserOptionsPopoverComponent,
+    CreateComplaintComponent
   ]
 })
 export class Components {}
