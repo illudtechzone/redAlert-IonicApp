@@ -6,10 +6,15 @@ import { StatusBar } from '@ionic-native/status-bar/ngx';
 import { OAuthService, JwksValidationHandler, AuthConfig } from 'angular-oauth2-oidc';
 
 export const authConfig: AuthConfig = {
-  issuer: 'http://localhost:8080/auth/realms/RedAlert',
+  issuer: 'http://35.237.193.86:8080/auth/realms/RedAlert',
   redirectUri: window.location.origin,
-  clientId: 'RA-ROOT',
-  scope: 'openid profile email'
+  clientId: 'account',
+  scope: 'openid profile email',
+  dummyClientSecret: 'b7e88785-0e1f-4f03-ade1-e8d986a7e116',
+  tokenEndpoint: 'http://35.237.193.86:8080/auth/realms/RedAlert/protocol/openid-connect/token',
+  userinfoEndpoint: 'http://35.237.193.86:8080/auth/realms/RedAlert/protocol/openid-connect/userinfo',
+  oidc: false,
+  requireHttps: false
 };
 
 @Component({

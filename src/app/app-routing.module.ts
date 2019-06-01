@@ -1,8 +1,7 @@
-import { HomeRedirectService } from './security/home-redirect.service';
-import { AuthGuardService } from './security/auth-guard.service';
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { OAuthModule } from 'angular-oauth2-oidc';
+import { AuthGuardService } from './security/auth-guard.service';
 
 const routes: Routes = [
   {
@@ -13,32 +12,31 @@ const routes: Routes = [
   {
     path: 'home',
     loadChildren: './pages/home/home.module#HomePageModule',
-    // canActivate: [AuthGuardService]
+  canActivate: [AuthGuardService]
   },
   {
     path: 'history',
     loadChildren: './pages/history/history.module#HistoryPageModule',
-    // canActivate: [AuthGuardService]
+     canActivate: [AuthGuardService]
   },
   {
     path: 'news',
     loadChildren: './pages/news/news.module#NewsPageModule',
-    //canActivate: [AuthGuardService]
+    canActivate: [AuthGuardService]
   },
   {
     path: 'friends',
     loadChildren: './pages/friends/friends.module#FriendsPageModule',
-     //canActivate: [AuthGuardService]
+    canActivate: [AuthGuardService]
   },
   {
     path: 'post',
     loadChildren: './pages/post/post.module#PostPageModule',
-   // canActivate: [AuthGuardService]
+    canActivate: [AuthGuardService]
   },
   {
     path: 'landing',
     loadChildren: './pages/landing/landing.module#LandingPageModule',
-   // canActivate: [HomeRedirectService]
   },
   {
     path: 'login',
@@ -47,9 +45,11 @@ const routes: Routes = [
   {
     path: 'profile',
     loadChildren: './pages/profile/profile.module#ProfilePageModule',
-    // canActivate: [AuthGuardService]
+     canActivate: [AuthGuardService]
   },
-  { path: 'cshome', loadChildren: './pages/cshome/cshome.module#CshomePageModule' }
+  { path: 'cshome', loadChildren: './pages/cshome/cshome.module#CshomePageModule' ,
+  canActivate: [AuthGuardService]
+}
 
 ];
 

@@ -19,7 +19,7 @@ export class CurrentUserService {
           resolve(this.user);
         },
         (error) => {
-            console.log('error' + error);
+            console.log('error',error);
             this.user = undefined;
             reject(null);
         });

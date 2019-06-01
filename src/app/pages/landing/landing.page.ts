@@ -18,8 +18,8 @@ export class LandingPage implements OnInit {
   }
 
   login() {
-    this.oauthService.initImplicitFlow();
-    // this.navCtrl.navigateForward('/login');
+    // this.oauthService.initImplicitFlow();
+     this.navCtrl.navigateForward('/login');
   }
 
   signup() {
