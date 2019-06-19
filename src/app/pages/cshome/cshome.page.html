@@ -5,48 +5,48 @@
   <ion-slides [options]="slideConfig" *ngFor="let number of numbers">
     <ion-slide *ngFor="let number of numbers">
 
-      <ion-card>
+      <ion-card class="cardBackground">
         <ion-grid>
           <ion-row>
               <ion-col>
                 <ion-item lines="none" color="vibrant">
-                <img src="assets/img/toney.jpg" slot="start" class="reviewProfile"/>
-                            
+                    <ion-avatar slot="start">
+                        <img src="assets/img/toney.jpg" >
+                      </ion-avatar>
                 <ion-card-subtitle slot="start"><strong>manu kg</strong>
                 </ion-card-subtitle> 
                 </ion-item>
               </ion-col>
 
             </ion-row>
+            <div class="cardBackground">
           <ion-row>
-              <ion-item lines="none"> 
-                  <ion-card-subtitle class="commentText">
-                      the food is awsome you need to try once 
-                  </ion-card-subtitle>
-              </ion-item>
+             
+                  <ion-col text-start>
+                      a man try to rob my iron man suit when i go for infinity
+                     
+                  </ion-col>
           </ion-row>
-          <ion-row>
+        </div>
+          <div class="cardFooter">
+          <ion-row class="cardFooterButtons">
+            
             <ion-col>
-              <ion-button color="medium" expand="block">
+             
                 <ion-icon name="thumbs-up"></ion-icon>
-              </ion-button>
+            
             </ion-col>
             <ion-col>
-              <ion-button color="medium" expand="block">
                 <ion-icon name="thumbs-down"></ion-icon>
-              </ion-button>
             </ion-col>
             <ion-col>
-              <ion-button color="medium" expand="block">
                 <ion-icon name="chatboxes"></ion-icon>
-              </ion-button>
             </ion-col>
             <ion-col>
-              <ion-button color="medium" expand="block">
                 <ion-icon name="locate"></ion-icon>
-              </ion-button>
             </ion-col>
           </ion-row>
+        </div>
         </ion-grid>
       </ion-card>
     </ion-slide>

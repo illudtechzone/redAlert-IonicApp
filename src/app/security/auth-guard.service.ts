@@ -20,7 +20,7 @@ export class AuthGuardService implements CanActivate{
       console.log('returnig true');
       return true;
     }
-    this.navController.navigateRoot('/landing');
+    this.navController.navigateRoot('/home');
     return false;
   }
 }

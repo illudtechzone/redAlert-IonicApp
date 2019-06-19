@@ -1,115 +1,130 @@
 <ion-header>
-    <ion-toolbar color="light">
-      <ion-buttons slot="start">
-        <ion-button (click)="dismiss()">
-          <ion-icon slot="icon-only" name="close"></ion-icon>
-        </ion-button>
-      </ion-buttons>
-    </ion-toolbar>
-  </ion-header>
-  
-  <ion-content>
-    <ion-grid>
-      <ion-row justify-content-center>
-        <ion-col class="ion-text-center">
-          <ion-card-title>
-            Create complaint
-          </ion-card-title>
-        </ion-col>
-      </ion-row>
-      <ion-row>
-        <ion-col size="12">
-          <ion-card>
-            <ion-item>
-              <ion-textarea placeholder="Enter more information here..." rows="5"></ion-textarea>
-            </ion-item>
-          </ion-card>
-        </ion-col>
-      </ion-row>
-      <ion-row>
-        <ion-col class="ion-text-center">
-          <ion-card-subtitle>
-            Link simular issues
-          </ion-card-subtitle>
-        </ion-col>
-        <ion-col>
-          <ion-slides [options]="slideConfig">
-  
-            <ion-slide *ngFor="let number of numbers">
-                <ion-card>
-                    <ion-grid>
-                      <ion-row>
-                          <ion-col>
-                            <ion-item lines="none" color="vibrant">
-                            <img src="assets/img/toney.jpg" slot="start" class="reviewProfile"/>
-                                        
-                            <ion-card-subtitle slot="start"><strong>manu kg</strong>
-                            </ion-card-subtitle> 
-                            </ion-item>
-                          </ion-col>
-            
-                        </ion-row>
-                      <ion-row>
-                          <ion-item lines="none"> 
-                              <ion-card-subtitle class="commentText">
-                                  the food is awsome you need to try once 
-                              </ion-card-subtitle>
-                          </ion-item>
-                      </ion-row>
-                      <ion-row>
-                        <ion-col>
-                          <ion-button color="medium" expand="block">
-                            <ion-icon name="thumbs-up"></ion-icon>
-                          </ion-button>
-                        </ion-col>
-                        <ion-col>
-                          <ion-button color="medium" expand="block">
-                            <ion-icon name="thumbs-down"></ion-icon>
-                          </ion-button>
-                        </ion-col>
-                        <ion-col>
-                          <ion-button color="medium" expand="block">
-                            <ion-icon name="chatboxes"></ion-icon>
-                          </ion-button>
-                        </ion-col>
-                        <ion-col>
-                          <ion-button color="medium" expand="block">
-                            <ion-icon name="locate"></ion-icon>
-                          </ion-button>
-                        </ion-col>
-                      </ion-row>
-                    </ion-grid>
-                  </ion-card>
-            </ion-slide>
-          </ion-slides>
-        </ion-col>
-      </ion-row>
-      <ion-row>
-        <ion-col>
-          <ion-button>
-            <ion-icon name="mic"></ion-icon>
-          </ion-button>
-        </ion-col>
-        <ion-col>
-          <ion-button>
-            <ion-icon name="pin"></ion-icon>
-          </ion-button>
-        </ion-col>
-        <ion-col>
-          <ion-button>
-            <ion-icon name="folder"></ion-icon>
-          </ion-button>
-        </ion-col>
-        <ion-col>
-          <ion-button>
-            <ion-icon name="images"></ion-icon>
-          </ion-button>
-          </ion-col>
-          <ion-col>
-            <ion-button (click)="dismiss()">
-              <ion-icon name="send"></ion-icon>
-            </ion-button>
-            </ion-col>
-      </ion-row>
-    </ion-grid>
-  </ion-content>
+  <ion-toolbar color="light">
+    <ion-buttons slot="start">
+      <ion-button (click)="dismiss()">
+        <ion-icon slot="icon-only" name="close"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-grid>
+    <ion-row justify-content-center>
+      <ion-col class="ion-text-center">
+        <ion-card-title>
+          Create complaint
+        </ion-card-title>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col size="12">
+        <ion-card>
+          <ion-item>
+            <ion-textarea placeholder="Enter more information here..."  rows="5"></ion-textarea>
+          </ion-item>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <div class="positionCustom">
+        <ion-fab>
+          <ion-fab-button>
+              <ion-icon name="attach"></ion-icon>
+          </ion-fab-button>
+          <ion-fab-list side="end">
+            <ion-fab-button>
+              <ion-icon name="mic"></ion-icon>
+            </ion-fab-button>
+            <ion-fab-button>
+              <ion-icon name="camera"></ion-icon>
+            </ion-fab-button>
+            <ion-fab-button>
+              <ion-icon name="images"></ion-icon>
+            </ion-fab-button>
+            <ion-fab-button>
+              <ion-icon name="locate"></ion-icon>
+            </ion-fab-button>
+
+          </ion-fab-list>
+
+        </ion-fab>
+      </div>
+    </ion-row>
+    <br>
+    <br>
+    <br>
+    <br>
+    <ion-row>
+      <ion-col class="ion-text-center">
+        <ion-card-subtitle>
+          Link simular issues
+        </ion-card-subtitle>
+      </ion-col>
+      <ion-col>
+        <ion-slides [options]="slideConfig">
+
+          <ion-slide *ngFor="let number of numbers">
+            <ion-card class="cardBackground">
+              <ion-grid>
+                <ion-row>
+                  <ion-col>
+                    <ion-item lines="none" color="vibrant">
+                      <ion-avatar slot="start">
+                        <img src="assets/img/toney.jpg">
+                      </ion-avatar>
+                      <ion-text slot="start"><strong>manu kg</strong>
+                      </ion-text>
+                    </ion-item>
+                  </ion-col>
+                  <ion-col size="2">
+                    <div class="linkingButton">
+                        <ion-icon name="link" color="primary"></ion-icon>
+                    </div>
+                  </ion-col>
+
+                </ion-row>
+                <div class="cardBackground">
+                  <ion-row>
+
+                    <ion-col text-start>
+                      a man try to rob my iron man suit when i go for infinity
+
+                    </ion-col>
+                  </ion-row>
+                </div>
+                <div class="cardFooter">
+                  <ion-row class="cardFooterButtons">
+
+                    <ion-col>
+
+                      <ion-icon name="thumbs-up"></ion-icon>
+
+                    </ion-col>
+                    <ion-col>
+                      <ion-icon name="thumbs-down"></ion-icon>
+                    </ion-col>
+                    <ion-col>
+                      <ion-icon name="chatboxes"></ion-icon>
+                    </ion-col>
+                    <ion-col>
+                      <ion-icon name="locate"></ion-icon>
+                    </ion-col>
+                  </ion-row>
+                </div>
+              </ion-grid>
+            </ion-card>
+          </ion-slide>
+        </ion-slides>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  <div class="positionCustom2">
+    <ion-button expand="full" (click)="dismiss()">
+      sent
+    </ion-button>
+    <ion-button expand="full">
+      private
+    </ion-button>
+  </div>
+</ion-content>

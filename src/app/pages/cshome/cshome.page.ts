@@ -14,8 +14,10 @@ export class CshomePage implements OnInit {
   currentSubPage : string = 'home';
   @ViewChild('slides') slides: IonSlides;
 
-  slideConfig : {
-
+  slideConfig = {
+    spaceBetween:3,
+    centeredSlides:true,
+    slidesPerView: 1.2,
   };
   constructor(private modalController:ModalController) { }
 
