@@ -15,6 +15,7 @@ export class CurrentUserService {
     return new Promise((resolve, reject) => {
       if (force || this.user === undefined) {
         this.accountservice.getAccountUsingGET().subscribe( (user) => {
+          console.log('geting user from account service',user);
           this.user = user;
           resolve(this.user);
         },
@@ -27,5 +28,8 @@ export class CurrentUserService {
         resolve(this.user);
       }
     });
+  }
+  removeUser(){
+    this.user=undefined;
   }
 }

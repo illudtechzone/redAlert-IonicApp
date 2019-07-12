@@ -12,12 +12,12 @@ const routes: Routes = [
   {
     path: 'home',
     loadChildren: './pages/home/home.module#HomePageModule',
-  // canActivate: [AuthGuardService]
+     canActivate: [AuthGuardService]
   },
   {
     path: 'history',
     loadChildren: './pages/history/history.module#HistoryPageModule',
-     //canActivate: [AuthGuardService]
+     canActivate: [AuthGuardService]
   },
   {
     path: 'news',
@@ -27,12 +27,12 @@ const routes: Routes = [
   {
     path: 'friends',
     loadChildren: './pages/friends/friends.module#FriendsPageModule',
-   // canActivate: [AuthGuardService]
+    canActivate: [AuthGuardService]
   },
   {
     path: 'post',
     loadChildren: './pages/post/post.module#PostPageModule',
-   // canActivate: [AuthGuardService]
+    canActivate: [AuthGuardService]
   },
   {
     path: 'landing',
@@ -45,11 +45,12 @@ const routes: Routes = [
   {
     path: 'profile',
     loadChildren: './pages/profile/profile.module#ProfilePageModule',
-    // canActivate: [AuthGuardService]
+     canActivate: [AuthGuardService]
   },
   { path: 'cshome', loadChildren: './pages/cshome/cshome.module#CshomePageModule' ,
-  // canActivate: [AuthGuardService]
-}
+     canActivate: [AuthGuardService]
+},
+  { path: 'signup', loadChildren: './pages/signup/signup.module#SignupPageModule' }
 
 ];
 

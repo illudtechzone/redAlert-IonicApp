@@ -1,7 +1,6 @@
 import { OAuthService } from 'angular-oauth2-oidc';
 import { HttpClient, HttpHeaders, HttpErrorResponse } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
-import { KeycloakAdminClient } from 'keycloak-admin/lib/client';
 import { NavController } from '@ionic/angular';
 
 @Component({
@@ -10,34 +9,19 @@ import { NavController } from '@ionic/angular';
   styleUrls: ['./login.page.scss'],
 })
 export class LoginPage implements OnInit {
-  kcAdminClient: KeycloakAdminClient;
-  username: string='';
-  password: string='';
-  agreement: boolean;
-  constructor(private http: HttpClient,private oauthService : OAuthService,
-   private navCtrl:NavController) { 
+  username = '';
+  password = '';
+  constructor(private http: HttpClient, private oauthService: OAuthService,
+   private navCtrl: NavController) {
   }
 
   ngOnInit() {
-    this.agreement = false;
-    this.kcAdminClient = new KeycloakAdminClient();
-    this.kcAdminClient.setConfig({
-        baseUrl: 'http://35.196.86.249:8080/auth'
 
-     });
-    this.configureKeycloakAdmin();
   }
 
-  configureKeycloakAdmin() {
-    this.kcAdminClient.auth({
-      username: 'admin',
-      password: 'karma123',
-      grantType: 'password',
-      clientId: 'admin-cli'
-    });
-  }
+
   tryLogin() {
-    console.log('username =',this.username,'  passwrd ',this.password);
+    console.log('username =', this.username, '  passwrd ', this.password);
     this.oauthService.fetchTokenUsingPasswordFlowAndLoadUserProfile(
       this.username,
       this.password,
@@ -49,13 +33,20 @@ export class LoginPage implements OnInit {
         console.log(claims);
       }
       if (this.oauthService.hasValidAccessToken()) {
-        console.log('got valid token ............',this.oauthService.hasValidAccessToken());
+        console.log('got valid token ............', this.oauthService.hasValidAccessToken());
         this.navCtrl.navigateForward('/home');
       }
     })
     .catch((err: HttpErrorResponse) => {
-    console.log('err ',err.error.error_description);
+    console.log('err ', err.error.error_description);
     });
+  }
+
+  loginDisabled() {
+
+  }
+  registerDisabled() {
+
   }
 
 }

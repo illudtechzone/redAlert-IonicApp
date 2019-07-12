@@ -7,20 +7,20 @@ import { ActivatedRouteSnapshot, Router, RouterStateSnapshot } from '@angular/ro
 @Injectable({
   providedIn: 'root'
 })
-export class AuthGuardService implements CanActivate{
-  path: import("@angular/router").ActivatedRouteSnapshot[];
-  route: import("@angular/router").ActivatedRouteSnapshot;
+export class AuthGuardService implements CanActivate {
+  path: import('@angular/router').ActivatedRouteSnapshot[];
+  route: import('@angular/router').ActivatedRouteSnapshot;
 
-  constructor(private oauthService:OAuthService,private router:Router,
-    private navController:NavController) { 
+  constructor(private oauthService: OAuthService, private router: Router,
+    private navController: NavController) {
    }
   canActivate(route: ActivatedRouteSnapshot, state: RouterStateSnapshot): boolean {
-    console.log("Check if token valid "+this.oauthService.hasValidAccessToken());
+    console.log('Check if token valid ' + this.oauthService.hasValidAccessToken());
     if (this.oauthService.hasValidAccessToken()) {
       console.log('returnig true');
       return true;
     }
-    this.navController.navigateRoot('/home');
+    this.navController.navigateRoot('login');
     return false;
   }
 }

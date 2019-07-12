@@ -17,8 +17,7 @@
     <ion-button color="danger" (click)="tryLogin()">Login</ion-button>
   </ion-row> -->
 
-  <ion-slides #slides (ionSlideDidChange)="slideChange()">
-    <ion-slide>
+  
       <ion-grid margin-top>
         <ion-row justify-content-center>
           <ion-col size="6" text-center>
@@ -41,36 +40,11 @@
             </ion-button>
           </ion-col>
         </ion-row>
-      </ion-grid>
-    </ion-slide>
-    <ion-slide>
-      <ion-grid margin-top>
-        <ion-row justify-content-center>
-          <ion-col size="6" text-center>
-            <div class="circle">
-              <ion-icon class="large-icon" name="person"></ion-icon>
-            </div>
-          </ion-col>
-        </ion-row>
-        <ion-row justify-content-center>
+        <ion-row>
           <ion-col text-center>
-            <ion-item class="item-inner">
-              <ion-label color="medium" position="floating">Username</ion-label>
-              <ion-input [(ngModel)]="username" background="light"></ion-input>
-            </ion-item>
-            <ion-item class="item-inner">
-              <ion-label color="medium" position="floating">Email</ion-label>
-              <ion-input [(ngModel)]="email" background="light"></ion-input>
-            </ion-item>
-            <ion-item class="item-inner">
-              <ion-label color="medium" position="floating">Password</ion-label>
-              <ion-input [(ngModel)]="password" type="password"></ion-input>
-            </ion-item>
-            <ion-button [disabled]="registerDisabled()" (click)="signup()"  expand="block" margin-top margin-bottom>Register</ion-button>
+            <ion-text>Dont have an Account? </ion-text>
+            <ion-text routerLink="/signup" class="cursor">Register</ion-text>
           </ion-col>
         </ion-row>
       </ion-grid>
-    </ion-slide>
-  </ion-slides>
-
 </ion-content>

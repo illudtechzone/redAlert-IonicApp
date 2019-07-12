@@ -7,6 +7,7 @@ import { AccountResourceService } from './services/account-resource.service';
 import { AuthInfoResourceService } from './services/auth-info-resource.service';
 import { LogoutResourceService } from './services/logout-resource.service';
 import { CommandResourceService } from './services/command-resource.service';
+import { QueryResourceService } from './services/query-resource.service';
 import { UserResourceService } from './services/user-resource.service';
 
 /**
@@ -26,6 +27,7 @@ import { UserResourceService } from './services/user-resource.service';
     AuthInfoResourceService,
     LogoutResourceService,
     CommandResourceService,
+    QueryResourceService,
     UserResourceService
   ],
 })

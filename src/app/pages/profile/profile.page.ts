@@ -13,8 +13,10 @@ export class ProfilePage implements OnInit {
   constructor(private userResource: UserResourceService, private  currentUser: CurrentUserService) { }
 
   async ngOnInit() {
+
     await this.currentUser.getCurrentUser(false).then( (usr) => {
       this.user = usr;
+      console.log('user>>>>>>>>>>>>>>>>>>', this.user);
     });
   }
 

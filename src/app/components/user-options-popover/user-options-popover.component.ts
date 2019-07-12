@@ -1,3 +1,4 @@
+import { CurrentUserService } from 'src/app/security/current-user.service';
 import { OAuthService } from 'angular-oauth2-oidc';
 import { NavController, PopoverController } from '@ionic/angular';
 import { Component, OnInit } from '@angular/core';
@@ -11,7 +12,8 @@ export class UserOptionsPopoverComponent implements OnInit {
 
   constructor(private navController: NavController,
               private popoverController: PopoverController,
-              private oauthService: OAuthService) { }
+              private oauthService: OAuthService,
+              private currentUserService: CurrentUserService) { }
 
   ngOnInit() {}
 
@@ -22,7 +24,9 @@ export class UserOptionsPopoverComponent implements OnInit {
 
   logout() {
     this.dismissPopUp();
+    this.currentUserService.removeUser();
     this.oauthService.logOut();
+    this.navController.navigateForward('/login');
   }
 
   dismissPopUp() {
